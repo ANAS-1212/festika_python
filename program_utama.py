@@ -601,7 +601,11 @@ class SimplePOS:
                     pause()
             elif pilih == "3":
                 now = datetime.now()
-                rows = [p for p in self.penjualan if datetime.strptime(p['created_at'], "%Y-%m-%d %H:%M:%S").month == now.month and datetime.strptime(p['created_at'], "%Y-%m-%d %H:%M:%S").year == now.year]
+                rows = [
+                    p for p in self.penjualan
+                    if datetime.strptime(p['created_at'], "%Y-%m-%d %H:%M:%S").month == now.month
+                    and datetime.strptime(p['created_at'], "%Y-%m-%d %H:%M:%S").year == now.year
+                ]
                 self._print_rekap(rows, f"📅 REKAP BULANAN — {now.strftime('%B %Y')}")
                 pause()
             elif pilih == "4":
