@@ -92,7 +92,16 @@ class SimplePOS:
     # ============================================================
     def welcome_screen(self):
         clear()
-        logo = ["K O P B O X — (No DB)"]
+        logo = [
+            r" _  __            ____                ",
+            r"| |/ /           |  _ \               ",
+            r"| ' / ___  _____ | |_) | ____  __  __",
+            r"|  < / _ \| '_  )|   < |/  _ \ \ \/ /",
+            r"| |\ \_ _/|  _ _/|_____/\____/ /_/\_\ ",
+            r"|_| \\    | |                         ",
+            r"      |_|          K O P B O X"
+        ]
+
         for line in logo:
             print(colored(line.center(60), "96"))
         pilih = input("\nTekan Enter untuk masuk, ketik 'q' untuk keluar: ").lower()
